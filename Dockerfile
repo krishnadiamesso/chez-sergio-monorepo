@@ -64,6 +64,8 @@ RUN echo "" && \
 
 COPY backend/ .
 
+RUN mkdir -p tmp/pids tmp/cache tmp/sockets log
+
 RUN echo "" && \
     echo "========================================================" && \
     echo "  [6/6]  MERGING — Copying Vue build into Rails public/ " && \
