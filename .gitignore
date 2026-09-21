@@ -1,0 +1,24 @@
+# Backend
+backend/.bundle
+backend/db/*.sqlite3
+backend/db/*.sqlite3-*
+backend/log/*
+backend/tmp/*
+backend/storage/*
+!backend/log/.keep
+!backend/tmp/.keep
+!backend/tmp/pids/.keep
+!backend/storage/.keep
+backend/.byebug_history
+
+# Frontend
+frontend/node_modules
+frontend/dist
+
+# Kamal
+.kamal/secrets
+
+# IDE
+.idea/
+.vscode/
+mise.toml

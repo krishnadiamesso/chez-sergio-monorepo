@@ -1,0 +1,20 @@
+.Menu {
+}
+
+.category-pill {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    color: #ff9300;
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}

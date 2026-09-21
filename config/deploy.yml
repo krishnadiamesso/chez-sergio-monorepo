@@ -1,0 +1,53 @@
+service: chez-sergio
+
+image: ghcr.io/krishnadiamesso/chez-sergio
+
+servers:
+  web:
+    hosts:
+      - 46.62.247.235
+    options:
+      network: "kamal"
+
+proxy:
+  ssl: true
+  host: chezsergio.krishnadiamesso.dev
+  app_port: 3000
+
+registry:
+  server: ghcr.io
+  username: krishnadiamesso
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+env:
+  clear:
+    RAILS_ENV: production
+    RAILS_LOG_TO_STDOUT: true
+    RAILS_SERVE_STATIC_FILES: true
+  secret:
+    - SECRET_KEY_BASE
+    - CHEZ_SERGIO_DATABASE_PASSWORD
+    - DATABASE_URL
+
+builder:
+  arch: amd64
+
+ssh:
+  user: root
+
+accessories:
+  db:
+    image: postgres:15-alpine
+    host: 46.62.247.235
+    options:
+      network: "kamal"
+    env:
+      clear:
+        POSTGRES_DB: chez_sergio_production
+        POSTGRES_USER: chez_sergio
+      secret:
+        - POSTGRES_PASSWORD
+    directories:
+      - data:/var/lib/postgresql/data
+    port: "127.0.0.1:5432:5432"

@@ -1,0 +1,28 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+montana:
+  id: 1
+  name: MyString
+  price: 1
+  description: MyText
+  image: MyString
+  categories: MyText
+  best_seller: 0
+
+parmesana:
+  id: 2
+  name: MyString
+  price: 1
+  description: MyText
+  image: MyString
+  categories: MyText
+  best_seller: 1
+
+brooklyn:
+  id: 3
+  name: MyString
+  price: 1
+  description: MyText
+  image: MyString
+  categories: MyText
+  best_seller: 1
