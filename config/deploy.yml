@@ -6,8 +6,6 @@ servers:
   web:
     hosts:
       - 46.62.247.235
-    options:
-      network: "kamal"
 
 proxy:
   ssl: true
@@ -40,8 +38,6 @@ accessories:
   db:
     image: postgres:15-alpine
     host: 46.62.247.235
-    options:
-      network: "kamal"
     env:
       clear:
         POSTGRES_DB: chez_sergio_production
